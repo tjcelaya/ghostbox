@@ -1,0 +1,27 @@
+# location: /etc/systemd/system/
+[Unit]
+Description = thunderdove upload service
+After       = syslog.target
+
+[Service]
+User        = thunderdove
+Group       = thunderdove
+
+ExecStart   = /usr/bin/nodejs /home/thunderdove/server.js
+
+ExecStop    = /bin/kill -INT $MAINPID
+ExecReload  = /bin/kill -TERM $MAINPID
+
+Restart     = always
+
+Type        = simple
+
+NotifyAccess= main
+
+# systemd gets to read the PID of daemon's main process
+# see ExecStop and ExecReload
+PIDFile     = /run/thunderdove.pid
+
+[Install]
+# multi-user.target === run level 3
+WantedBy    = multi-user.target

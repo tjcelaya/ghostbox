@@ -1,0 +1,24 @@
+{
+  "name": "thunderdove",
+  "version": "1.0.0",
+  "description": "stupid simple files",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tjcelaya/thunderdove.git"
+  },
+  "author": "Tomas Celaya <tjcelaya@gmail.com>",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/tjcelaya/thunderdove/issues"
+  },
+  "homepage": "https://github.com/tjcelaya/thunderdove",
+  "dependencies": {
+    "express": "^4.15.3",
+    "express-fileupload": "^0.1.3"
+  }
+}
